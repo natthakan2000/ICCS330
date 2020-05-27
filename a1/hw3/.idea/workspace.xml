@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ded8bcc7-f3de-4bfc-83e5-1aa907f6a046" name="Default Changelist" comment="" />
+    <list default="true" id="ded8bcc7-f3de-4bfc-83e5-1aa907f6a046" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -22,6 +29,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1bip55ucexjeht5s57PKTsaACxp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -75,6 +83,7 @@
       <workItem from="1589124585854" duration="917000" />
       <workItem from="1589203418576" duration="3403000" />
       <workItem from="1589208987685" duration="9722000" />
+      <workItem from="1590590010422" duration="13000" />
     </task>
     <servers />
   </component>
