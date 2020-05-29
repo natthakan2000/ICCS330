@@ -1,4 +1,4 @@
-public class gameStat {
+public class GameStat {
     private String name;
     private int hp;
     private int power;
