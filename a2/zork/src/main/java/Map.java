@@ -12,5 +12,10 @@ public class Map {
         }
         return rows;
     }
-    
+    public static void test(List<String> temp){
+        char[] tempCh = new char[temp.size()];
+        for (int i = 0; i < temp.size(); i++) {
+
+        }
+    }
 }

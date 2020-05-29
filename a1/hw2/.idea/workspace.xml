@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74fe6e29-4291-4330-b4a0-ba3047af40db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hw3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/gameStat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
