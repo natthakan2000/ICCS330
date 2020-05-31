@@ -28,6 +28,10 @@ public class Game {
         return rng.nextInt(size);
     }
     public static void setStat(Boolean newGame){
-
+        if (newGame){
+            GameStat gameStat = new GameStat();
+            gameStat.setHp(50);
+            gameStat.setPower(50);
+        }
     }
 }
