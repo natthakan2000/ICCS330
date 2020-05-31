@@ -12,10 +12,17 @@ public class Map {
         }
         return rows;
     }
-    public static void test(List<String> temp){
-        char[] tempCh = new char[temp.size()];
+    public static char[][] getNewMap(File rootDir) throws IOException {
+        List<String> temp = getOriginalMap(rootDir);
+        System.out.println(temp.size());
+        char[][] m = new char[temp.size()][];
         for (int i = 0; i < temp.size(); i++) {
-
+            char[] tempChar = new char[temp.get(i).length()];
+            for (int j = 0; j < temp.get(i).length(); j++) {
+                tempChar[j] = temp.get(i).charAt(j);
+            }
+            m[i] = tempChar;
         }
+        return m;
     }
 }
