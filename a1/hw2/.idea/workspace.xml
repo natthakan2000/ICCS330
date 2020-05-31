@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74fe6e29-4291-4330-b4a0-ba3047af40db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../a2/zork/target/classes/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/target/classes/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a2/zork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589180034100</updated>
       <workItem from="1589180038785" duration="10610000" />
-      <workItem from="1590504624209" duration="3941000" />
+      <workItem from="1590504624209" duration="4704000" />
     </task>
     <servers />
   </component>
