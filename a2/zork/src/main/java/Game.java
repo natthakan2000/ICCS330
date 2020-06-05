@@ -4,6 +4,7 @@ import org.apache.commons.rng.UniformRandomProvider;
 import org.apache.commons.rng.simple.RandomSource;
 
 public class Game {
+    public static GameStat gameStat = new GameStat();
     private static final UniformRandomProvider rng = RandomSource.create(RandomSource.MT);
     public static char[][] getMonster(Boolean newGame, File rootDir) throws IOException {
         if (newGame){
@@ -21,6 +22,29 @@ public class Game {
                 }
             }
             return m;
+        }else{
+            char[][] m = gameStat.getMap();
+            for (int i = 0; i < m.length; i++) {
+                for (int j = 0; j < m[i].length; j++) {
+                    if (m[i][j] == 'm'){
+                        m[i][j] = ' ';
+                        int rand = random(2);
+                        if (rand % 2 == 1){
+                            if (m[i][j+1] != '|' || m[i][j+1] != 'd'){
+                                m[i][j+1] = 'm';
+                            }else{
+                                m[i][j-1] = 'm';
+                            }
+                        }else{
+                            if (m[i][j-1] != '|' || m[i][j-1] != 'd'){
+                                m[i][j-1] = 'm';
+                            }else{
+                                m[i][j+1] = 'm';
+                            }
+                        }
+                    }
+                }
+            }
         }
         return null;
     }
