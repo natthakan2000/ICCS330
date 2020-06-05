@@ -8,6 +8,7 @@ public class GameStat {
     public String getName(){
         return name;
     }
+    public void setMap()
     public void setHp(int hp){
         this.hp = hp;
     }
