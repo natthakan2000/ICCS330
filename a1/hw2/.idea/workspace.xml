@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74fe6e29-4291-4330-b4a0-ba3047af40db" name="Default Changelist" comment="" />
+    <list default="true" id="74fe6e29-4291-4330-b4a0-ba3047af40db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../a2/zork/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a2/zork/src/main/java/Game.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

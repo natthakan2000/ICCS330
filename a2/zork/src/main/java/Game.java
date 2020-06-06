@@ -45,8 +45,9 @@ public class Game {
                     }
                 }
             }
+            gameStat.setMap(m);
+            return m;
         }
-        return null;
     }
     private static int random(int size){
         return rng.nextInt(size);
