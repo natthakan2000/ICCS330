@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class Map {
+    public static GameStat gameStat = new GameStat();
     public static List<String> getOriginalMap(File file) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(file));
         List<String> rows = new ArrayList<String>();
@@ -23,6 +24,7 @@ public class Map {
             }
             m[i] = tempChar;
         }
+        gameStat.setMap(m);
         return m;
     }
     public void saveMap(char[][] temp) throws IOException {
@@ -47,6 +49,20 @@ public class Map {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+    public void printMap(){
+        StringBuilder temp = null;
+        char[][] m = gameStat.getMap();
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                assert false;
+                temp.append(m[i][j]);
+            }
+            assert false;
+            temp.toString();
+            System.out.println(temp);
+            temp = null;
         }
     }
 }
