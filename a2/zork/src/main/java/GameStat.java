@@ -9,6 +9,7 @@ public class GameStat {
     private int monsterHp;
     private int monsterPower;
     private List<Integer> allMonster;
+    private int playerLocation;
     public void setName(String name){
         this.name = name;
     }
@@ -45,6 +46,13 @@ public class GameStat {
     public List<Integer> getAllmonster(){
         return allMonster;
     }
+    public void setPlayerLocation(int playerLocation){
+        this.playerLocation = playerLocation;
+    }
+    public int getPlayerLocation() {
+        return playerLocation;
+    }
+
     public void setHp(int hp){
         this.hp = hp;
     }

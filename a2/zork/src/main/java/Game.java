@@ -7,6 +7,7 @@ import org.apache.commons.rng.UniformRandomProvider;
 import org.apache.commons.rng.simple.RandomSource;
 
 public class Game {
+    public static Map map = new Map;
     public static GameStat gameStat = new GameStat();
     private static final UniformRandomProvider rng = RandomSource.create(RandomSource.MT);
     public static char[][] getMonster(Boolean newGame, File rootDir) throws IOException {
@@ -62,11 +63,18 @@ public class Game {
     private static int random(int size){
         return rng.nextInt(size);
     }
+    public static char[][] movePlayer(String position){
+        char[][] m = gameStat.getMap();
+        if (position.equals("up")){
+
+        }
+    }
     public static void setStat(Boolean newGame){
         if (newGame){
             GameStat gameStat = new GameStat();
             gameStat.setHp(50);
             gameStat.setPower(50);
+            gameStat.setPlayerLocation(1);
         }
     }
 }

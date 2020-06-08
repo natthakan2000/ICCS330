@@ -1,11 +1,16 @@
 import org.apache.commons.cli.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class Main {
     public static void main(String[] args) throws IOException, ParseException {
+        Game game = new Game();
+        Map map = new Map();
+        GameStat gameStat = new GameStat();
+        Boolean running = true;
         Options options = new Options();
         Boolean playing = false;
         Boolean newGame = false;
@@ -24,26 +29,45 @@ public class Main {
         options.addOption("exit", null, false, "exit whole game");
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd = parser.parse(options,args);
-        if (!playing){
-            if (cmd.hasOption("help")){
-                Help.helper();
-            }if (cmd.hasOption("play")){
-                playing = true;
-                newGame = true;
+        while (running) {
+            if (!playing) {
+                if (cmd.hasOption("help")) {
+                    Help.helper();
+                }
+                if (cmd.hasOption("play")) {
+                    playing = true;
+                    newGame = true;
+                    File file = new File(cmd.getOptionValue("play"));
+                    Map.getNewMap(file);
+                    Game.getMonster(true, file);
+                    map.printMap();
+                }if (cmd.hasOption("load")){
+                    playing = true;
+                    newGame = false;
+                    File file = new File(cmd.getOptionValue("load"));
+                    Map.getNewMap(file);
+                    map.printMap();
+                }if (cmd.hasOption("exit")){
+                    exit(0);
+                }
+            } else {
+                //Boolean newGame = null;
+                //need command
+                //System.out.println(Map.getOriginalMap(new File("/Users/natthakan/muic/iccs330/a2/map1.txt")));
+                //Map.getNewMap(new File("/Users/natthakan/muic/iccs330/a2/map1.txt"));
+                // Scanner sc = new Scanner(System.in);
+                System.out.println("New game y/n");
+                //String temp = sc.nextLine();
+                    if (cmd.hasOption("quit")) {
+                        playing = false;
+                    }if (cmd.hasOption("save")){
+                        playing = false;
+
+                        map.saveMap(gameStat.getMap());
+                }
+                    //need a function to load saved game
+                    //need function to retrieve stat
             }
-        }
-        //Boolean newGame = null;
-        //need command
-        //System.out.println(Map.getOriginalMap(new File("/Users/natthakan/muic/iccs330/a2/map1.txt")));
-        //Map.getNewMap(new File("/Users/natthakan/muic/iccs330/a2/map1.txt"));
-       // Scanner sc = new Scanner(System.in);
-        System.out.println("New game y/n");
-        //String temp = sc.nextLine();
-        String map = null;
-        while(playing){
-            System.out.println();
-            //need a function to load saved game
-            //need function to retrieve stat
         }
     }
 }
