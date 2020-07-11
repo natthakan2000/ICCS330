@@ -13,6 +13,7 @@ public class Game {
     public static char[][] getMonster(Boolean newGame, File rootDir) throws IOException {
         List<Integer> allMonster = new ArrayList<Integer>();
         if (newGame){
+            gameStat.setRoom(1);
             char[][] m = Map.getNewMap(rootDir);
             for (int i = 0; i < m.length; i++) {
                 int rand = random(m[i].length);

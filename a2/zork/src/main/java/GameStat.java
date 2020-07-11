@@ -5,7 +5,7 @@ public class GameStat {
     private int hp;
     private int power;
     private char[][] map;
-    private String room;
+    private int room;
     private int monsterHp;
     private int monsterPower;
     private List<Integer> allMonster;
@@ -22,10 +22,10 @@ public class GameStat {
     public char[][] getMap(){
         return map;
     }
-    public void setRoom(String room){
+    public void setRoom(int room){
         this.room = room;
     }
-    public String getRoom(){
+    public int getRoom(){
         return room;
     }
     public void setMonsterHp(int hp){

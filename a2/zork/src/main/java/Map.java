@@ -65,4 +65,15 @@ public class Map {
             temp = null;
         }
     }
+    public static char[][] getRoom(){
+        char[][] room = new char[][];
+        char[][] temp = gameStat.getMap();
+        int roomNumber = gameStat.getRoom();
+        for (int i = 0; i < ; i++) {
+
+        }
+        for (int i = 0; i < temp[roomNumber-1].length; i++) {
+
+        }
+    }
 }
