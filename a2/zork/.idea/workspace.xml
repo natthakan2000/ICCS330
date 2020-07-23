@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63eea9ed-a0dd-4cb1-b43d-326b5549505c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../a1/hw2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../a1/hw4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/a2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/src/main/java/Downloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw4/src/main/java/Downloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw4/src/main/java/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/target/classes/Downloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw4/target/classes/Downloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/target/classes/Grabber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../a1/hw4/target/classes/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../a1/hw4/target/classes/Runner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameStat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameStat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Map.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +58,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunManager">
@@ -92,6 +102,8 @@
       <workItem from="1590504019485" duration="10570000" />
       <workItem from="1590942278715" duration="26745000" />
       <workItem from="1592887231844" duration="248000" />
+      <workItem from="1595516219402" duration="842000" />
+      <workItem from="1595520120905" duration="2810000" />
     </task>
     <servers />
   </component>
@@ -99,6 +111,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="496" y="225" key="#Project_Structure" timestamp="1595522154894">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="496" y="225" key="#Project_Structure/0.0.1792.1120@0.0.1792.1120" timestamp="1595522154894" />
     <state width="1750" height="299" key="GridCell.Tab.0.bottom" timestamp="1590942250084">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

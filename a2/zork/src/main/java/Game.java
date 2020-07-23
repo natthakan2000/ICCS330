@@ -7,7 +7,7 @@ import org.apache.commons.rng.UniformRandomProvider;
 import org.apache.commons.rng.simple.RandomSource;
 
 public class Game {
-    public static Map map = new Map;
+    public static Map map = new Map();
     public static GameStat gameStat = new GameStat();
     private static final UniformRandomProvider rng = RandomSource.create(RandomSource.MT);
     public static char[][] getMonster(Boolean newGame, File rootDir) throws IOException {

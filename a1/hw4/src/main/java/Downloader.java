@@ -43,5 +43,11 @@ public class Downloader{
     }
     public void createDir(String downloadPath){
         File files = new File(downloadPath);
+        if (!files.exists()) {
+            if (files.mkdirs()) {
+            } else {
+                System.exit(1);
+            }
+        }
     }
 }

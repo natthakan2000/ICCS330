@@ -11,9 +11,10 @@ import java.util.StringTokenizer;
 
 public class Runner {
     private String domain = "https://ooc.cs.muzoo.io/docs/";
-    private String inputPath = "/Users/natthakan/Desktop";
+    private String inputPath = "/Users/natthakan/muic/iccs330/a1/hw4";
     private HashSet<String> visited = new HashSet<>();
     private Downloader downloader = new Downloader();
+    private HashSet<String> resources = new HashSet<>();
     public String getDomain() {
         return domain;
     }
@@ -28,8 +29,8 @@ public class Runner {
         result();
     }
     private void prepareDownload() {
-        //System.out.println("running");
-        inputPath = "/Users/natthakan/Desktop"; //Path for downloaded file location (required)
+        System.out.println("running");
+        inputPath = "/Users/natthakan/muic/iccs330/a1/hw4"; //Path for downloaded file location (required)
         downloader.createDir(inputPath);
         downloader.input();
     }
@@ -82,44 +83,75 @@ public class Runner {
         Elements source = document.select("[src]");
         Elements links = document.select("link[href]");
         for (Element src : source) {
-            String newPath = src.attr("src");
-            downloader.fileDownloader(domain+newPath, inputPath +newPath.replaceFirst(getDomain(),""));
+            String newPath = src.attr("src").replaceAll("\\.\\./","");
+            if(resources.contains(newPath)){
+                continue;
+            }
+            resources.add(newPath);
+            downloader.fileDownloader(domain+newPath, inputPath+newPath.replaceFirst(getDomain(),""));
+            //downloader.fileDownloader(domain+newPath, inputPath +newPath.replaceFirst(getDomain(),""));
         }
         for (Element link : links) {
-            String newPath = link.attr("href");
-            downloader.fileDownloader(domain+newPath, inputPath +newPath.replaceFirst(getDomain(),""));
+            String newPath = link.attr("href").replaceAll("\\.\\./","");
+            //downloader.fileDownloader(domain+newPath, inputPath +newPath.replaceFirst(getDomain(),""));
+            if(resources.contains(newPath)){
+                continue;
+            }
+            resources.add(newPath);
+            downloader.fileDownloader(domain+newPath, inputPath+newPath.replaceFirst(getDomain(),""));
         }
     }
-    private HashSet<String> findNeighbors(String inputUrl){
-        HashSet<String> neighbors = new HashSet<>();
-        Document document = null;
+//    private HashSet<String> findNeighbors(String inputUrl){
+//        HashSet<String> neighbors = new HashSet<>();
+//        Document document = null;
+//        try {
+//            document = Jsoup.connect(inputUrl).get();
+//        } catch (IOException e) {
+//            return new HashSet<>();
+//        }
+//        assert document != null;
+//        Elements links = document.select("a[href]");
+//        for (Element link : links) {
+//            String neighborLink = link.attr("abs:href");
+//            if(neighborLink.startsWith(getDomain())) {
+//                neighbors.add(neighborLink.replaceFirst("%.*/?", "").replaceFirst("#.*/?", "").replaceAll("\\?.*", ""));
+//            }
+//        }
+//        return neighbors;
+//    }
+    private HashSet<String> getNeighbour(String inputUrl){
+        HashSet<String> neighbours = new HashSet<>();
+        Document doc;
         try {
-            document = Jsoup.connect(inputUrl).get();
+            doc = Jsoup.connect(inputUrl).get();
         } catch (IOException e) {
             return new HashSet<>();
         }
-        assert document != null;
-        Elements links = document.select("a[href]");
+        Elements links = doc.select("a[href]");
         for (Element link : links) {
-            String neighborLink = link.attr("abs:href");
-            if(neighborLink.startsWith(getDomain())) {
-                neighbors.add(neighborLink.replaceFirst("%.*/?", "").replaceFirst("#.*/?", "").replaceAll("\\?.*", ""));
+            String neighbourLink = link.attr("abs:href");
+            if(neighbourLink.startsWith(getDomain())){
+                neighbours.add(neighbourLink.replaceFirst("%.*\\/?","").replaceFirst("#.*\\/?","").replaceAll("\\?.*",""));
             }
         }
-        return neighbors;
+        return neighbours;
     }
     private void bfs(String inputUrl){
         //System.out.println("running2");
         visited.add(inputUrl);
-        HashSet<String> frontiers = findNeighbors(inputUrl);
+        HashSet<String> frontiers = getNeighbour(inputUrl);
         while(!frontiers.isEmpty()){
             HashSet<String> newFrontiers = new HashSet<>();
             for (String urlFrontier: frontiers) {
-                if(visited.contains(urlFrontier)) {
-                    continue;
+                if(visited.contains(urlFrontier)) continue;
+                String filePath = inputPath+urlFrontier.replaceFirst(getDomain(),"");
+                downloader.fileDownloader(urlFrontier,filePath);
+                if(Files.exists(Paths.get(filePath))) {
+                    extractor(filePath);
                 }
+                counter(filePath);
                 visited.add(urlFrontier);
-                newFrontiers.addAll(findNeighbors(urlFrontier));
+                newFrontiers.addAll(getNeighbour(urlFrontier));
             }
             frontiers = newFrontiers;
             frontiers.removeAll(visited);
